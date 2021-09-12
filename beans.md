@@ -1,7 +1,7 @@
 # Beans
 Beans are Java class instances (usually singletons) that are managed by containers.
 
-A container's internal representation of beans is done with the `BeanDefinition` class. This class includes things like the bean's autowiring mode, lazy initialization mode, initialization callbacks, and destruction callbacks.
+A container's internal representation of beans is defined in the `BeanDefinition` class. This class includes things like the bean's autowiring mode, lazy initialization mode, initialization callbacks, and destruction callbacks.
 
 To add external objects as beans, modify the bean factory in `ApplicationContext`.
 ```java

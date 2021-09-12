@@ -1,5 +1,4 @@
-# Core Technologies
-## IoC Container
+# IoC Container
 Chief among Spring's core technologies is the IoC (inversion of control) container.
 
 "Inversion of control" (also known as "dependency injection") is the technique of feeding the dependencies of a class through its contructor instead of just putting them in as normal class properties. This allows for much more flexibility.
@@ -26,22 +25,15 @@ class DependencyInjection
 }
 ```
 
-Spring refers to classes written in this way as "Beans". Beans are no different from any other Java class, except that they are expected to be written a certain way.
+With this, Spring can easily instantiate its beans with a high degree of configurability.
 
-A Bean class is any class that has...
-* All private member variables that are accessible via public getters and setters.
-* A public, zero-argument constructor.
-* Is serializable (in Java, this means that it implements the `Serializable` interface).
-
-It's weird that Spring refers to its IoC classes as Beans since the Spring convention is to receive dependencies via constructor arguments, while the actual definition of a Bean class is to have a zero-argument constructor. I suppose it's possible for a class to have both a dependency injection constructor and a zero-argument constructor, but the Spring documentation doesn't mention the actual conventions for Bean classes and just focuses on the the dependency injection constructor.
-
-All necessary Beans and their dependencies are recorded in the "configuration metadata", which is then given to the IoC container so it can instantiate, configure, and assemble any Bean effectively. The IoC container knows what to instantiate/configure/assemble based off of what's in the configuration metadata.
+All necessary beans and their dependencies are recorded in the "configuration metadata", which is then given to the IoC container so it can instantiate, configure, and assemble any bean effectively. The IoC container knows what to instantiate/configure/assemble based off of what's in the configuration metadata.
 
 A bean's dependencies are also sometimes called "collaborators".
 
-In a nutshell, the Spring framework works by having the IoC container take in Bean classes and the configuration metadata as input, and giving a fully configured system as output.
+In a nutshell, the Spring framework works by having the IoC container take in bean classes and the configuration metadata as input, and then giving a fully configured system as output.
 
-### Interfaces
+## Interfaces
 The main packages for the IoC container are `org.springframework.beans` and `org.springframework.context`.
 
 The package `org.springframework.beans` contains the `BeanFactory` interface and the package `org.springframework.context` provides the `ApplicationContext` interface. The `BeanFactory` interface provides the configuration framework and basic functionality, while the `ApplicationContext` interface provides more application-specific functionality and represents the IoC container itself.
