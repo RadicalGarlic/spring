@@ -1,5 +1,5 @@
 # IoC Container
-Chief among Spring's core technologies is the IoC (inversion of control) container.
+The central entity responsible for configuring/instantiating/managing beans is IoC (inversion of control) container.
 
 "Inversion of control" (also known as "dependency injection") is the technique of feeding the dependencies of a class through its contructor instead of just putting them in as normal class properties. This allows for much more flexibility.
 ```java
@@ -33,7 +33,7 @@ A bean's dependencies are also sometimes called "collaborators".
 
 In a nutshell, the Spring framework works by having the IoC container take in bean classes and the configuration metadata as input, and then giving a fully configured system as output.
 
-## Interfaces
+## Java Interfaces
 The main packages for the IoC container are `org.springframework.beans` and `org.springframework.context`.
 
 The package `org.springframework.beans` contains the `BeanFactory` interface and the package `org.springframework.context` provides the `ApplicationContext` interface. The `BeanFactory` interface provides the configuration framework and basic functionality, while the `ApplicationContext` interface provides more application-specific functionality and represents the IoC container itself.
@@ -63,7 +63,7 @@ Here's an example of an XML Spring configuration metadata file. The `id` attribu
         <!-- collaborators and configuration for this bean go here -->
     </bean>
 
-    <!-- more bean definitions go here -->
+    <!-- more bean definitions can go here -->
 </beans>
 ```
 
