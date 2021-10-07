@@ -20,10 +20,14 @@ Each module is represented a Java package.
 * `org.springframework.context`
 * `org.springframework.expression`
 
-Bits and pieces of each module come together to implement a feature of the Spring framework, so it's not really worth it to go through each on individually.
+Bits and pieces of each module come together to implement a feature of the Spring framework, so it's not really worth it to go through each one individually.
 
 ## [IoC Container](ioc-container.md)
 
 ## [Beans](beans.md)
+
+## [Dependencies](dependencies.md)
+
+## [Java-Based Configuration](java-based-configuration.md)
 
 ## [Web MVC](web-mvc.md)
